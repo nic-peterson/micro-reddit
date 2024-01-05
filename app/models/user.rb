@@ -8,4 +8,6 @@ class User < ApplicationRecord
             presence: { message: "Email can't be blank" },
             uniqueness: { message: "Email has already been taken" },
             format: { with: URI::MailTo::EMAIL_REGEXP, message: "Email is not a valid format" }
+
+  has_many :posts, dependent: :destroy
 end
