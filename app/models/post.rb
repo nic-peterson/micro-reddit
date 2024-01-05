@@ -3,5 +3,5 @@ class Post < ApplicationRecord
   validates :description, presence: true
   validates :post_url, url: true, presence: true
 
-  # belongs_to :user
+  belongs_to :user
 end
