@@ -4,4 +4,5 @@ class Post < ApplicationRecord
   validates :post_url, url: true, presence: true
 
   belongs_to :user
+  has_many :comments, dependent: :destroy
 end

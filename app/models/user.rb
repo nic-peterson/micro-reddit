@@ -10,4 +10,5 @@ class User < ApplicationRecord
             format: { with: URI::MailTo::EMAIL_REGEXP, message: "Email is not a valid format" }
 
   has_many :posts, dependent: :destroy
+  has_many :comments, dependent: :destroy
 end
